@@ -1,0 +1,25 @@
+<form>
+    <div class="col-md-6">
+            <div class="form-group">
+                <label for="note-title">Título</label>
+                <input [(ngModel)]="title" name="title" id="note-title" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="note-author">Autor</label>
+                <input [(ngModel)]="author" name="author" id="note-author" type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="note-tags">Etiquetas</label>
+                <input [(ngModel)]="tags" name="tags" id="note-tags" type="text" class="form-control">
+            </div>                                    
+            <button (click)="saveNote()" id="note-save" class="btn btn-primary">Guardar</button>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+            <label for="note-text">Escriba su nota aquí</label>
+            <div style="height: 100%;">
+                <textarea [(ngModel)]="text" name="text" id="note-text" class="form-control" cols="50" rows="5"></textarea>
+            </div>                                    
+        </div>
+    </div>
+</form>                      

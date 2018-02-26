@@ -1,18 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
+import { NotesComponent } from './notes.component';
+import { FormComponent } from './form.component';
+import { TableComponent } from './table.component';
 
-import { AppComponent } from './app.component';
-
+import { PersistenceService } from './persistence.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    NotesComponent,
+    FormComponent,
+    TableComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [PersistenceService],
+  bootstrap: [NotesComponent]
 })
 export class AppModule { }

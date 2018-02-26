@@ -1,0 +1,24 @@
+<div class="col-md-12">
+    <table id="notes-table" class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Etiquetas</th>
+                <th>Contenido</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let note of notes">
+                <td>{{note.id}}</td>
+                <td>{{note.title}}</td>
+                <td>{{note.author}}</td>
+                <td>{{note.tags}}</td>
+                <td>{{note.text}}</td>
+                <td><button class="remove-note" (click)="removeNote(note)">Eliminar</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
